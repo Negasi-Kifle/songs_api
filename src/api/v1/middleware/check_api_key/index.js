@@ -14,5 +14,4 @@ module.exports = (req, res, next) => {
     return next(new AppError("Please provide a valid API Key", 400));
 
   next();
-  gm;
 };

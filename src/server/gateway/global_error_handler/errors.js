@@ -11,11 +11,6 @@ module.exports = (err) => {
     err = new AppError("Timeout. Try again", 400);
   }
 
-  // Duplicate error - MongoDB
-  if (err.message && err.message.includes("E11000")) {
-    err = new AppError("Duplicate data exists", 400);
-  }
-
   // Validation errir
   if (err.name === "ValidationError") {
     err = new AppError("DB validation error", 400);

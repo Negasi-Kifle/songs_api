@@ -7,6 +7,9 @@ const sendDevError = require("./send_dev_error");
 // Send Prod Error
 const sendProdError = require("./send_prod_error");
 
+// Send unknown environment error
+const unknownEnvError = require("./unknown_env");
+
 // Errors
 const errors = require("./errors");
 
@@ -25,7 +28,7 @@ module.exports = (err, req, res, next) => {
     sendDevError(err, res);
   } else if (config.env === "qa" || config.env === "production") {
     sendProdError(err, res);
+  } else {
+    unknownEnvError(res);
   }
-
-  next();
 };

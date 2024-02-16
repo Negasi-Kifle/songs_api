@@ -9,4 +9,5 @@ module.exports = {
   env: process.env.NODE_ENV,
   db,
   api_key: process.env.API_KEY,
+  delete_key: process.env.DELETE_KEY,
 };
