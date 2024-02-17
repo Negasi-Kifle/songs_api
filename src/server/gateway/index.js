@@ -31,6 +31,15 @@ const configs = require("../../config");
 // Check API Key
 
 const { checkAPIKey } = require("../../api/v1/middleware");
+
+// Test endpoint
+app.use("/test", (req, res) => {
+  res.status(200).json({
+    message: "API is working fine",
+  });
+});
+
+// Required API key for any endpoint
 app.use("*", checkAPIKey);
 
 // Handle routes for API V1
