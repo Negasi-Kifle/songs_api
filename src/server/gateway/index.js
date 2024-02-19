@@ -33,8 +33,9 @@ const configs = require("../../config");
 const { checkAPIKey } = require("../../api/v1/middleware");
 
 // Test endpoint
-app.use("/test", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).json({
+    status: "SUCCESS",
     message: "API is working fine",
   });
 });

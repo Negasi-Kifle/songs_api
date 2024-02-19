@@ -1,0 +1,12 @@
+node_modules
+*.env
+
+# Since the .env file is ignored from the dock image, use the following command to run the container
+
+#   ***************************************
+
+#    docker run -d -p 3000:3000 -e NODE_ENV=production 
+#   -e DEV_DB=mongodb+srv://trusProjects:trustNegasi@cluster0.av84jvq.mongodb.net/addis-songs?retryWrites=true"&"w=majority 
+#   -e PROD_DB=mongodb+srv://trusProjects:trustNegasi@cluster0.av84jvq.mongodb.net/addis-songs?retryWrites=true"&"w=majority 
+#   -e API_KEY=EWRTYUIOUHGVxcfgyuiolkjuioiHBGTR5FGHV98765fghjkiokjhgCFG 
+#   -e DELETE_KEY=9IJNqwer5r4VUH8vhVyJKmOKh2345 negasikiflom/songs-api 
