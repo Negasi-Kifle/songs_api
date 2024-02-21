@@ -19,4 +19,7 @@ module.exports = class Song {
 
   // Delete song by id
   static deleteSongById = require("./delete_song_by_id");
+
+  // Songs analytics
+  static analytics = require("./songs_analytics");
 };

@@ -12,6 +12,7 @@ const {
   getSongById,
   deleteAllSongs,
   deleteSongById,
+  analytics,
 } = require("./controllers");
 
 // Mount routes with their respective controller mthods
@@ -20,6 +21,8 @@ router
   .post(validator(createSongValidation), createSong)
   .get(getAllSongs)
   .delete(validator(deleteAllSongsValidation), deleteAllSongs);
+
+router.get("/analytics", analytics);
 
 router
   .route("/:id")
