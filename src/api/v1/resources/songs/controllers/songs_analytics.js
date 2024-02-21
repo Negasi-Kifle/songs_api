@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
 
     // Response
     res.status(200).json({
-      status: 200,
+      status: "SUCCESS",
       data: { analytics },
     });
   } catch (error) {
