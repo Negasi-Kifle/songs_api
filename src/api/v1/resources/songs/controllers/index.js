@@ -6,4 +6,5 @@ module.exports = {
   updateSong: require("./update_song"),
   deleteAllSongs: require("./delete_all_songs"),
   deleteSongById: require("./delete_song_by_id"),
+  analytics: require("./songs_analytics"),
 };
